@@ -1,0 +1,23 @@
+package com.example.dubbo_customer.controller;
+
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.example.service.reportService;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @Description
+ * @Date 2020/1/16 15:20
+ * @Author cly
+ **/
+@RestController
+public class TestController {
+    @Reference(version ="1.0.0" ,timeout = 3000)
+    private com.example.service.reportService reportService;
+    @RequestMapping(value = "test/{id}")
+    public void test(@PathVariable(value = "id") int id){
+        int count=reportService.del(id);
+        System.out.println("=="+id);
+  }
+}

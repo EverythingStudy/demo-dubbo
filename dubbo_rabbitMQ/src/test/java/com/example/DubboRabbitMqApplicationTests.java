@@ -1,10 +1,10 @@
-package com.example.dubbo_customer;
+package com.example;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DubboCustomerApplicationTests {
+class DubboRabbitMqApplicationTests {
 
     @Test
     void contextLoads() {
