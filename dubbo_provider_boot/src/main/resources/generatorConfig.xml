@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<!DOCTYPE generatorConfiguration   
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"   
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">   
+<generatorConfiguration>   
+<!-- classPathEntry:数据库的JDBC驱动,换成你自己的驱动位置 --> 
+<!-- <properties resource="util/generatorConfig.properties" />   -->
+<!--      <classPathEntry  location="D:/maven/com/oracle/ojdbc/6/ojdbc-6.jar"/>  -->
+     <classPathEntry  location="D:/maven/fakepath/mysql-connector-java/5.0.8/mysql-connector-java-5.0.8-bin.jar"/>       
+    <context id="DB2Tables"  targetRuntime="MyBatis3">   
+        <commentGenerator>   
+            <property name="suppressDate" value="true"/>  
+            <!-- 去除自动生成的注释 -->   
+            <property name="suppressAllComments" value="false"/>   
+        </commentGenerator>   
+<!--          <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:orcl" userId="sys as SYSDBA" password="WDwanliyun2015">  -->
+<!--        </jdbcConnection>  -->
+ <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/wlyopenempi?characterEncoding=utf8" userId="root" password="root">   
+         </jdbcConnection>  
+        <javaTypeResolver>   
+            <property name="forceBigDecimals" value="false"/>   
+        </javaTypeResolver>   
+        <!-- targetProject:自动生成代码的位置 --> 
+        <javaModelGenerator targetPackage="com.example.entity" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>   
+            <property name="trimStrings" value="true"/>   
+        </javaModelGenerator>   
+        <sqlMapGenerator targetPackage="com.example.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>   
+        </sqlMapGenerator>   
+        
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>   
+        </javaClientGenerator> 
+          <!-- 生成代码的表 -->
+<!--         <table schema="wlyteach" tableName="tb_school"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table> -->
+<!--         <table schema="adapter" tableName="facility_relation_hospital"></table> -->
+       <table  schema="dubbo_provider_boot" tableName="report"></table>
+<!--        <table schema="adapter" tableName="facility_relation_hospital"></table> -->
+    </context>   
+</generatorConfiguration> 
