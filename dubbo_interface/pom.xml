@@ -23,6 +23,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <artifactId>common</artifactId>
+            <groupId>com.example</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
