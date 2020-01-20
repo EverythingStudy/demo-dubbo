@@ -4,6 +4,7 @@ import com.example.constant.RabbitConfig;
 import com.example.entity.MsgLog;
 import com.example.util.MailUtil;
 import com.rabbitmq.client.Channel;
+import com.sun.corba.se.impl.orbutil.closure.Constant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
