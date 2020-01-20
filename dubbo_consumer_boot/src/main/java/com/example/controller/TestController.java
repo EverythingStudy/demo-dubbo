@@ -1,6 +1,7 @@
 package com.example.controller;
 
 
+import com.example.bean.User;
 import com.example.service.reportService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,10 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @Reference(version = "1.0.0")
     private reportService reportService;
+
     @RequestMapping(value = "test/{id}")
-    public void test(@PathVariable(value = "id") int id){
+    public void test(@PathVariable(value = "id") int id) {
         System.out.println(id);
-        int count=reportService.del(id);
-        System.out.println("=="+id);
-  }
+        int count = reportService.del(id);
+        System.out.println("==" + id);
+    }
+
+    @RequestMapping(value = "get")
+    public User getUser() {
+        return reportService.get();
+    }
 }
