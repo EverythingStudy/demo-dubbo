@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.bean.User;
 import com.example.dao.ReportMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,5 +20,10 @@ public class ReportServiceImpl implements reportService {
         int count=reportMapper.deleteByPrimaryKey(id);
         System.out.println("=="+count);
         return count;
+    }
+
+    @Override
+    public User get() {
+        return null;
     }
 }
