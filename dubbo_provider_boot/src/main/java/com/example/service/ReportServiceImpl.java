@@ -18,11 +18,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Service(version = "1.0.0", interfaceClass = reportService.class)
 public class ReportServiceImpl implements reportService {
     private final Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+    //ReportHandler reportHandler=new ReportHandler();
+
     @Autowired
     ReportMapper reportMapper;
 
     @Override
     public int del(int id) {
+        //reportService reportService=(reportService)reportHandler.newProxyInstance(new ReportServiceImpl());
+
         int cout = reportMapper.deleteByPrimaryKey(id);
         System.out.println(cout);
         return cout;

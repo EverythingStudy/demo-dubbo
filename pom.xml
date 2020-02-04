@@ -17,6 +17,8 @@
         <module>dubbo_interface</module>
         <module>dubbo_consumer_mvc</module>
         <module>dubbp_commom</module>
+        <module>dubbo_provider_anno_mvc</module>
+        <module>dubbo_consumer_anno_mvc</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
