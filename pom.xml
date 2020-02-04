@@ -9,13 +9,13 @@
     <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
     <modules>
-        <module>dubbo_provide</module>
-        <module>dubbo_privode_boot</module>
-        <module>dubbo_customer</module>
+        <module>dubbo_provider_boot</module>
+        <module>dubbo_provider_mvc</module>
+        <module>dubbo_consumer_boot</module>
         <module>dubbo_rabbitMQ</module>
         <module>dubbo_web</module>
         <module>dubbo_interface</module>
-        <module>dubbo_customer_mvc</module>
+        <module>dubbo_consumer_mvc</module>
         <module>dubbp_commom</module>
     </modules>
     <parent>
