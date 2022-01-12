@@ -16,7 +16,7 @@
     <properties>
         <java.version>1.8</java.version>
         <curator.version>2.8.0</curator.version>
-        <dubbo-version>2.7.1</dubbo-version>
+        <dubbo-version>2.7.15</dubbo-version>
         <zookeeper-version>3.4.11</zookeeper-version>
     </properties>
 
