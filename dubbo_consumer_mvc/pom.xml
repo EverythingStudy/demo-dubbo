@@ -45,7 +45,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.4</version>
+            <version>1.2.83</version>
         </dependency>
         <!-- 日志，java日志：slf4j,log4j,logback,common-logging 使用：slf4j+log4j -->
         <dependency>
